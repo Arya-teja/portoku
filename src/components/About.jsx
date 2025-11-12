@@ -152,9 +152,9 @@ const About = () => {
               className="grid grid-cols-3 gap-6"
             >
               {[
-                { label: "Projects", value: "20+" },
-                { label: "Experience", value: "3+ Yrs" },
-                { label: "Certificates", value: "10+" },
+                { label: "Projects", value: "2" },
+                { label: "Experience", value: "<1 yrs" },
+                { label: "Certificates", value: "5+" },
               ].map((stat, index) => (
                 <div key={index} className="text-center">
                   <div className="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-purple-400">

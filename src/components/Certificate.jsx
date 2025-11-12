@@ -330,13 +330,13 @@ const Certificate = () => {
                   whileHover={{ scale: 1.05, y: -2 }}
                   className="px-6 py-3 bg-indigo-500/10 text-indigo-300 rounded-full text-sm font-medium border border-indigo-500/20 hover:bg-indigo-500/20 transition-all cursor-default"
                 >
-                  📚 Currently Learning: TypeScript
+                  📚 Currently Project: Next JS
                 </motion.span>
                 <motion.span
                   whileHover={{ scale: 1.05, y: -2 }}
                   className="px-6 py-3 bg-purple-500/10 text-purple-300 rounded-full text-sm font-medium border border-purple-500/20 hover:bg-purple-500/20 transition-all cursor-default"
                 >
-                  🎯 Next Goal: AWS Certification
+                  🎯 Next Goal: Integrating Next.js with Node.js API and MongoDB
                 </motion.span>
               </motion.div>
             </div>

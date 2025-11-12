@@ -1,64 +1,39 @@
 import { motion } from "framer-motion";
 import { useState } from "react";
+import shiroImage from "../assets/project/web-shiro.png";
+import storyImage from "../assets/project/story-app.png";
 
 const Projects = () => {
   const [hoveredIndex, setHoveredIndex] = useState(null);
 
   const projects = [
     {
-      title: "E-Commerce Platform",
+      title: "Sushi Shiro",
       description:
-        "A full-featured online shopping platform with cart, payment integration, and admin dashboard.",
-      tech: ["React", "Node.js", "MongoDB", "Tailwind"],
-      image: "🛒",
+        "A modern sushi ordering website built with React, Vite, and Tailwind CSS. Sushi Shiro offers a clean and responsive interface where users can explore sushi menus and enjoy a smooth browsing experience",
+      tech: ["React", "Vite.js", "Tailwind"],
+      image: shiroImage,
       gradient: "from-blue-500 to-cyan-500",
-      link: "#",
+      link: "https://web-shiro.vercel.app",
     },
     {
-      title: "Task Management App",
+      title: "Story App",
       description:
-        "Collaborative task manager with real-time updates, team features, and productivity analytics.",
-      tech: ["Next.js", "Firebase", "Tailwind"],
-      image: "✅",
+        "A web application that allows users to add and view stories with location data through an interactive map",
+      tech: ["HTML", "CSS", "Javascript"],
+      image: storyImage,
       gradient: "from-purple-500 to-pink-500",
-      link: "#",
+      link: "https://story-app-project.netlify.app/",
     },
-    {
-      title: "Portfolio Website",
-      description:
-        "Modern and responsive portfolio website showcasing projects and skills with smooth animations.",
-      tech: ["React", "Tailwind", "Vite"],
-      image: "💼",
-      gradient: "from-indigo-500 to-purple-500",
-      link: "#",
-    },
-    {
-      title: "Weather Dashboard",
-      description:
-        "Real-time weather application with forecasts, interactive maps, and location-based data.",
-      tech: ["React", "API", "CSS"],
-      image: "🌤️",
-      gradient: "from-cyan-500 to-blue-500",
-      link: "#",
-    },
-    {
-      title: "Social Media App",
-      description:
-        "Social networking platform with posts, comments, likes, and real-time chat functionality.",
-      tech: ["Next.js", "PostgreSQL", "Tailwind"],
-      image: "📱",
-      gradient: "from-pink-500 to-rose-500",
-      link: "#",
-    },
-    {
-      title: "Blog Platform",
-      description:
-        "Content management system with markdown support, SEO optimization, and analytics.",
-      tech: ["Next.js", "MDX", "Tailwind"],
-      image: "📝",
-      gradient: "from-amber-500 to-orange-500",
-      link: "#",
-    },
+    // {
+    //   title: "Portfolio Website",
+    //   description:
+    //     "Modern and responsive portfolio website showcasing projects and skills with smooth animations.",
+    //   tech: ["React", "Tailwind", "Vite"],
+    //   image: "💼",
+    //   gradient: "from-indigo-500 to-purple-500",
+    //   link: "#",
+    // },
   ];
 
   const containerVariants = {
@@ -150,7 +125,7 @@ const Projects = () => {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.1 }}
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8"
         >
           {projects.map((project, index) => (
             <motion.div
@@ -171,7 +146,7 @@ const Projects = () => {
                 perspective: "1000px",
               }}
             >
-              {/* Project Image/Icon with Parallax */}
+              {/* ✅ Project Image/Icon - FIXED */}
               <div className="relative h-56 overflow-hidden">
                 <motion.div
                   animate={{
@@ -180,16 +155,28 @@ const Projects = () => {
                   transition={{ duration: 0.4 }}
                   className={`absolute inset-0 bg-gradient-to-br ${project.gradient} flex items-center justify-center`}
                 >
-                  <motion.div
-                    animate={{
-                      rotate: hoveredIndex === index ? 360 : 0,
-                      scale: hoveredIndex === index ? 1.2 : 1,
-                    }}
-                    transition={{ duration: 0.6 }}
-                    className="text-7xl"
-                  >
-                    {project.image}
-                  </motion.div>
+                  {/* ✅ Cek apakah emoji atau gambar */}
+                  {typeof project.image === "string" &&
+                  project.image.length <= 5 ? (
+                    // Emoji - render sebagai text
+                    <motion.div
+                      animate={{
+                        rotate: hoveredIndex === index ? 360 : 0,
+                        scale: hoveredIndex === index ? 1.2 : 1,
+                      }}
+                      transition={{ duration: 0.6 }}
+                      className="text-7xl"
+                    >
+                      {project.image}
+                    </motion.div>
+                  ) : (
+                    // Gambar - render sebagai img
+                    <img
+                      src={project.image}
+                      alt={project.title}
+                      className="w-full h-full object-cover"
+                    />
+                  )}
                 </motion.div>
 
                 {/* Overlay */}
@@ -303,7 +290,7 @@ const Projects = () => {
         </motion.div>
 
         {/* Bottom CTA */}
-        <motion.div
+        {/* <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -333,7 +320,7 @@ const Projects = () => {
               />
             </motion.svg>
           </motion.a>
-        </motion.div>
+        </motion.div> */}
       </div>
     </section>
   );

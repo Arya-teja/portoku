@@ -206,15 +206,8 @@ const Footer = () => {
           >
             &copy; {currentYear} Portoku. Built with React & Tailwind CSS.
           </motion.p>
-          <motion.p
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.7 }}
-            className="text-slate-500 text-xs mt-2"
-          >
-            Crafted with 💜 and ☕
-          </motion.p>
+          
+          
         </motion.div>
       </div>
     </motion.footer>
