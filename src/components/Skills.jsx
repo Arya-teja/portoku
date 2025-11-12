@@ -4,7 +4,7 @@ import Html from "../assets/HTML.png";
 import Js from "../assets/JS.png";
 import React from "../assets/React.jpg";
 import Next from "../assets/Next.jpg";
-import Git from "../assets/Git.png";
+import Git from "../assets/git.png";
 import Tailwind from "../assets/Tailwind.png";
 
 const Skills = () => {
