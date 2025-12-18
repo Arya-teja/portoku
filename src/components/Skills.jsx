@@ -6,6 +6,9 @@ import React from "../assets/React.jpg";
 import Next from "../assets/Next.jpg";
 import Git from "../assets/git.png";
 import Tailwind from "../assets/Tailwind.png";
+import Prisma from "../assets/prisma.png";
+import Nest from "../assets/nestjs.jpg";
+import Postgres from "../assets/postgresql.png";
 
 const Skills = () => {
   const skills = [
@@ -60,24 +63,24 @@ const Skills = () => {
     },
     {
       name: "Nest.JS",
-      icon: Git,
-      color: "from-teal-500 to-cyan-500",
+      icon: Nest,
+      color: "from-read-300 to-red-500",
       description: "Backend development framework",
       level: 80,
     },
     {
       name: "PostgreSQL",
-      icon: Git,
-      color: "from-teal-500 to-cyan-500",
+      icon: Postgres,
+      color: "from-blue-500 to-cyan-800",
       description: "Relational database management",
       level: 80,
     },
     {
       name: "Prisma",
-      icon: Git,
+      icon: Prisma,
       color: "from-teal-500 to-cyan-500",
       description: "ORM for database access",
-      level: 95,
+      level: 80,
     },
   ];
 
