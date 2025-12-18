@@ -4,7 +4,7 @@ import Html from "../assets/HTML.png";
 import Js from "../assets/JS.png";
 import React from "../assets/React.jpg";
 import Next from "../assets/Next.jpg";
-import Git from "../assets/Git.png";
+import Git from "../assets/git.png";
 import Tailwind from "../assets/Tailwind.png";
 
 const Skills = () => {
@@ -21,7 +21,7 @@ const Skills = () => {
       icon: Css,
       color: "from-blue-500 to-cyan-500",
       description: "Modern styling & animations",
-      level: 93,
+      level: 100,
     },
     {
       name: "JavaScript",
@@ -56,6 +56,27 @@ const Skills = () => {
       icon: Git,
       color: "from-teal-500 to-cyan-500",
       description: "Version control & collaboration",
+      level: 95,
+    },
+    {
+      name: "Nest.JS",
+      icon: Git,
+      color: "from-teal-500 to-cyan-500",
+      description: "Backend development framework",
+      level: 80,
+    },
+    {
+      name: "PostgreSQL",
+      icon: Git,
+      color: "from-teal-500 to-cyan-500",
+      description: "Relational database management",
+      level: 80,
+    },
+    {
+      name: "Prisma",
+      icon: Git,
+      color: "from-teal-500 to-cyan-500",
+      description: "ORM for database access",
       level: 95,
     },
   ];
