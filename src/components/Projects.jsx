@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { useState } from "react";
 import shiroImage from "../assets/project/web-shiro.png";
 import storyImage from "../assets/project/story-app.png";
+import telcorecImage from "../assets/telcorecs.png";
 
 const Projects = () => {
   const [hoveredIndex, setHoveredIndex] = useState(null);
@@ -22,6 +23,15 @@ const Projects = () => {
         "A web application that allows users to add and view stories with location data through an interactive map",
       tech: ["HTML", "CSS", "Javascript"],
       image: storyImage,
+      gradient: "from-purple-500 to-pink-500",
+      link: "https://story-app-project.netlify.app/",
+    },
+    {
+      title: "Telcorecs",
+      description:
+        "A data-driven recommendation system web application built with Next.js and Express.js, powered by machine learning to deliver personalized telco service recommendations to users",
+      tech: ["Next.js", "Express", "Machine Learning"],
+      image: telcorecImage,
       gradient: "from-purple-500 to-pink-500",
       link: "https://story-app-project.netlify.app/",
     },
