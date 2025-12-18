@@ -33,7 +33,7 @@ const Projects = () => {
       tech: ["Next.js", "Express", "Machine Learning"],
       image: telcorecImage,
       gradient: "from-purple-500 to-pink-500",
-      link: "https://story-app-project.netlify.app/",
+      link: "https://telco-six.vercel.app/",
     },
     // {
     //   title: "Portfolio Website",
